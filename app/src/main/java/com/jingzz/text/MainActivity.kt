@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
     //裁剪图片
     private fun crop(uri: Uri) {
         registerForActivityResult(CropImage()){
-            Glide.with(this).load(it.toFile).into(binding.ivImage)
+            Glide.with(this).load(it).into(binding.ivImage)
         }.launch(CropImageResult(uri,1,1))
     }
 }

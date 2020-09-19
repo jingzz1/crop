@@ -35,7 +35,7 @@ class CropImage: ActivityResultContract<CropImageResult, Uri>(){
         intent.putExtra("crop", "true") // crop=true 有这句才能出来最后的裁剪页面.
         intent.putExtra("output", outUri)
         intent.putExtra("outputFormat", "JPEG") // 返回格式
-        intent.putExtra("return-data", true)
+        intent.putExtra("return-data", false)
 
 
         if (input.outputX != 0 && input.outputY != 0) {
